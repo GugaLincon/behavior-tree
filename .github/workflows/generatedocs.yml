@@ -12,12 +12,14 @@ jobs:
       - name: Clone repository
         run: |
           git clone https://github.com/GugaLincon/behavior-tree.git
-          cd behavior-tree
       
       - name: Generate docs
         uses: mattnotmitt/doxygen-action@v1.9.4
+        with:
+          working-directory: 'behavior-tree/'
       
       - name: Save as artifact
         run: |
+          cd behavior-tree
           dir
         
