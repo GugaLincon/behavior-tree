@@ -22,8 +22,8 @@ jobs:
         run: |
           cd behavior-tree
           mkdir docs
-          mv html docs
-          mv latex docs
+          sudo mv html docs
+          sudo mv latex docs
       
       - name: Use the Upload Artifact GitHub Action
         uses: actions/upload-artifact@v2
