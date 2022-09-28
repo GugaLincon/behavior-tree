@@ -18,8 +18,16 @@ jobs:
         with:
           working-directory: 'behavior-tree/'
       
-      - name: Save as artifact
+      - name: Move output to docs
         run: |
           cd behavior-tree
-          dir
+          mkdir docs
+          mv html docs
+          mv latex docs
+      
+      - name: Use the Upload Artifact GitHub Action
+        uses: actions/upload-artifact@v2
+        with: 
+          name: docs
+          path: behavior-tree/docs
         
