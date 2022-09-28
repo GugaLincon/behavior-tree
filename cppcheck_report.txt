@@ -1,0 +1,26 @@
+src/BehaviorTreeBuilder.cpp:6:5: performance: Variable 'currentParent' is assigned in constructor body. Consider performing initialization in initialization list. [useInitializationList]
+    currentParent = nullptr;
+    ^
+src/TreeNode.h:51:17: style:inconclusive: Technically the member function 'behavior_tree::TreeNode::getName' can be const. [functionConst]
+    std::string getName();
+                ^
+src/TreeNode.cpp:16:23: note: Technically the member function 'behavior_tree::TreeNode::getName' can be const.
+std::string TreeNode::getName() {
+                      ^
+src/TreeNode.h:51:17: note: Technically the member function 'behavior_tree::TreeNode::getName' can be const.
+    std::string getName();
+                ^
+src/BehaviorTreeBuilder.cpp:18:0: style: The function 'build' is never used. [unusedFunction]
+
+^
+src/BehaviorTreeBuilder.cpp:9:0: style: The function 'end' is never used. [unusedFunction]
+
+^
+src/TreeNode.cpp:16:0: style: The function 'getName' is never used. [unusedFunction]
+
+^
+src/BehaviorTree.cpp:8:0: style: The function 'update' is never used. [unusedFunction]
+
+^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+
